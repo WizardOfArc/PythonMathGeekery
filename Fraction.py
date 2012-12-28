@@ -262,22 +262,5 @@ class Fraction(object):
         else:
              return True
 
-class Interval (Fraction):
-     
-     def octavize(self):
-         if type(self) == int:
-             temp = Interval(self,1)
-         elif isinstance(self, Interval):
-             temp = self
-         else:
-             raise IndexError
-
-         if temp < 1:
-             while temp < 1:
-                 temp = temp*2
-         elif temp > 2:
-             while temp > 2:
-                 temp =  temp / 2
-         return temp           
          
 
